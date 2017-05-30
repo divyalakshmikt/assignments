@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+		<title >Bootstrap</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Basic model example</h2>
+		<!--trigger the model with a button-->
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">open modal</button>
+		<!--modal--> 
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<!--modal content--> 
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span>
+							<span class="sr-only">close</span>
+
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Logint to site.com</h4>
+					</div>
+         			<div class="modal-body">
+
+						<div class="well">
+
+							<form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+						    <div class="form-group">
+								<label for="username" class="control-label">username</label>
+								<input type="text" class="form-control" id="username" name="username" value="" required="" title="please enter ur username"
+								placeholder="example@gmail.com">
+								
+								<span class="help-block"></span>
+
+							</div>
+
+
+							<div class="form-group">
+								<label for="password" class="control-label">password</label>
+								<input type="password" class="form-control" id="password" name="password"
+								value="" required="" title="please enter ur password">
+										
+								<span class="help-block"></span>
+
+							</div>
+							<div id="loginErrorMsg" class="alert alert-error hide">wrong user name and password</div>
+							<div class="checkbox">
+								<label>
+								<input type="checkbox" name="remmeber" id="remmeber">remmeber login</label>
+								<p class="help-block">(if this a private computer)</p>
+							</div>
+							<button type="submmit" class="btn btn-success btn-block">login</button>
+							<a href="/fogot/" class="btn btn-block"> help to login</a>
+
+
+							</form>
+						</div></div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+
+
+</body>
+</html>
+
