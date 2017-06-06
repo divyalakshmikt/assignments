@@ -1,0 +1,27 @@
+<html>
+    <HEAD>
+        	<TITLE>
+        	 	MY WEBSITE
+        	</TITLE>
+            <script >
+            function sum() 
+             {
+            
+             var x=parseInt(document.getElementById('txt_box1').value);   
+             var y= parseInt(document.getElementById('txt_box2').value); 
+             var z= x+y;
+
+             alert(z);
+
+            }
+
+            </script>
+    </HEAD>
+    <body align="center"><br><br>
+    	<h1>Addition of two number</h1>
+    Enter first no:  &nbsp;&nbsp;  <input type="text" id="txt_box1" name="txt_box"><br><br>
+    Enter second no:    <input type="text" id="txt_box2" name="txt_box"><br><br>
+        <input type="button"  value="sum" onClick="sum()">
+    
+    </body>
+    </html>

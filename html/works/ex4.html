@@ -1,0 +1,117 @@
+<html>
+	<head>
+        <style>
+            .blue
+            {
+                background-color: blue;
+                
+                height: 175px;
+                margin: auto;
+            
+
+            }
+            .green
+            {
+                background-color: green;
+                margin: auto;
+                height: 700px;
+                margin: auto;
+            }
+            #errMessageName,#tryagain ,#error,#mistake
+            {
+                color: red;
+                
+            }
+
+
+
+
+
+        </style>
+
+		<script>
+    			function validate_form()
+    			{
+    				alert("hello");
+    				var name=document.getElementById("cname").value;
+
+    				if (name=="") {
+    					alert("Enter ur name");
+                        document.getElementById("errMessageName").innerHTML="ENTER UR NAME";
+    				    return false;
+    				    }
+
+    				var male=document.getElementById("male").checked;
+    				var female=document.getElementById("female").checked;
+    					if(!(male || female))
+    					{   alert("choose gender");
+                            document.getElementById("error").innerHTML="ENTER UR GENDER";
+    						return false;}
+
+
+    				var branch=document.getElementById("branch").value;
+
+    				
+    					if (branch=="")
+    					{   alert("choose branch");
+                            document.getElementById("mistake").innerHTML="ENTER UR BRANCH";
+    						return false ;}  
+    				     
+    				var lang1=document.getElementById("language1");
+    				var lang2=document.getElementById("language2");
+    				var lang3=document.getElementById("language3");
+    				
+    				if (lang1.checked==false&& lang2.checked==false&& lang3.checked==false)
+    					{alert("language not submit"); 
+                    document.getElementById("try again").innerHTML="ENTER UR LANGUAGE";
+    					return false ;}
+
+
+    			}
+
+		</script>
+
+	</head>
+    <div class="blue">
+	<body align=center ><br><br>
+		<h1><strong>BAABTRA REGISTRATION</strong></h1>
+     </div> 
+     <div class="green"> <br><br><br> 
+		<form action="jsp.html" method="get" >
+
+                     
+		<STRONG>	ENTER FULL NAME</STRONG>  &nbsp;&nbsp;
+					<input type="text" name="name" id="cname"><label id="errMessageName" ></label><br><br><br>
+                    
+
+		<STRONG>	GENGER:</STRONG> &nbsp;&nbsp;&nbsp;&nbsp;
+
+					<input type="radio" name="gender" value="male" id="male"><B> Male </B> &nbsp;&nbsp;                    
+		 			 <input type="radio" name="gender" value="female" id="female"> <B>Female<B>
+                     <label id="error"></label><br><br><br><br>
+                   
+
+		 <STRONG>   BRANCH:</STRONG> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<select name="branch" id="branch">
+						<option value="">Choose Brach</option>
+						<option value="it">IT</option>
+						<option value="mech">mech</option>
+					</select>
+                    <label id="mistake"></label><br><br><br><br>
+					
+
+
+		<STRONG>	LANGUAGES KNOWN:</STRONG>&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" value="" id="language1">malayalam
+
+					<input type="checkbox" value="" id="language2">english
+					<input type="checkbox" value="" id="language3">hindi
+                    <label id="try again"></label><br><br><br><br>
+
+					<input type="submit" value="submit" onClick="return validate_form()">
+
+		</form>
+        </div>    
+
+	</body>	
+</html>	

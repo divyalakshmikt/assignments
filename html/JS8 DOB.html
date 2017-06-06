@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>	calculate ur age</title>
+</head>
+<script>
+
+function Age()
+{
+	var bday=parseInt(document.getElementById("txtBday").value);
+	var bmo=(parseInt(document.getElementById("txtBmo").value)-1);
+	var byr=parseInt(document.getElementById("txtByr").value);
+	var byr;
+	var age;
+	var now = new Date();
+	tday=now.getDate();
+	tmo=(now.getMonth());
+	tyr=(now.getFullYear());
+	{
+	if((tmo > bmo)||(tmo==bmo & tday>=bday))
+	{age=byr}
+	else
+	{age=byr+1}
+	alert("As of today: "+ (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear()+' \n'+" you are:"+' \n'+(tyr-age)+ " years old");
+	}
+}
+
+</script>
+</head>
+
+<body ><br><br>
+	<h1 align="center">Calculate ur age from ur DOB</h1>
+<form><center>
+	Enter your birthdate&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="txtBday" size="4"><br><br><br>
+	Enter your birth Month(1-12)&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txtBmo" size="4" ><br><br><br>
+	Enter your 4 digit birth year&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="txtByr" size="4" ><br><br><br><br>
+	<input type="submit" value="submit" onClick="Age()"><br><br>
+
+	<input type="reset" value="reset"></center>
+</form>
+</body>
+</html>

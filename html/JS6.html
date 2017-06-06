@@ -1,0 +1,42 @@
+<html>
+    <HEAD>
+        	<TITLE>
+        	 	MY WEBSITE
+        	</TITLE>
+        	<script>
+        	var c=0;
+        	
+					function myCounter()
+				   {
+				   		if (c==0)
+				   		 {
+
+
+				   			c=document.getElementById("txt_box").value;
+				   		}
+
+		    			document.getElementById("lbl_display").innerHTML = --c;
+		    			
+		    			if(c==0)
+		    			{
+		    				clearInterval(myTimer);
+
+		    			}
+					}
+					
+			</script> 
+
+				
+
+
+
+    </head>
+    <body align="center"><br><br>
+
+ ENTER A NUMBER: 	<input type="text" id="txt_box" name="txt_box"><br><br>
+  	<label id="lbl_display"> </label><br><br>
+				
+  	<input type="button" id="btn_start" name="btn_start" value="Start" onClick="myTimer = setInterval(myCounter, 1000)">&nbsp;&nbsp;
+  <input type="button" id="btn_stop" name="btn_stop" value="Stop" onClick="clearInterval(myTimer)">
+    </body> 
+</html>           

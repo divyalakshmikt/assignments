@@ -1,0 +1,35 @@
+<html>
+<head>
+
+	<script>
+
+	function msg()
+	{
+	
+		var x = document.forms["myForm"]["email"].value;
+    	var at= x.indexOf("@");
+   		 var dot= x.lastIndexOf(".");
+    if (at<1 || dot<at+2 || dot+2>=x.length)
+     {
+        alert("Not a valid e-mail address");
+        return false;
+
+	}
+	else
+		alert("valid email");
+}
+
+	</script>
+
+</head>
+<body align="center"><br><br>
+	<form  name="myForm" >
+	ENTER UR E-MAIL:	<input type="text" name="email" ><BR><br>
+
+
+		<input type="submit" value="submit" onClick="msg()">
+	</form>
+
+
+</body>	
+</html>

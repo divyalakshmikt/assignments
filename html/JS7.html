@@ -1,0 +1,48 @@
+<html>
+    <HEAD>
+        	<TITLE>
+        	 	MY WEBSITE
+        	</TITLE>
+        	<script>
+
+        	var c;
+        	var repeat=0
+        	
+					function myCounter()
+				   {
+				   			
+						if (repeat==0)
+				   		 {
+				   		 	
+				   			c=prompt("enter a value");
+				   			repeat=1;				   			
+				   		}
+				   		if(c>=0)
+				   		{
+
+				   			document.getElementById("demo").innerHTML = c;
+				   		}
+				   		c--;
+				   			
+	    			if(c<-1)
+
+		    			{
+		    			
+		    				clearInterval(myTimer);
+		    				alert("time expired");
+			    			c=0;
+							repeat=0;
+		    			}
+					}
+					
+					
+						
+					
+			</script> 
+    </head>
+    <body align="center"><br><br><br><br><br><br>
+    	<p id="demo"></p><br>
+		<h1>If u want to see the counter click on START</h1>		
+  		<input type="button" id="btn_start" name="btn_start" value="Start" onClick="myTimer = setInterval(myCounter, 1000)" size="8"><br><br>
+    </body> 
+</html>           
