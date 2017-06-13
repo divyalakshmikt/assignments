@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<STYLE>
+			body
+			{
+				margin: auto;
+				margin-top: 200px;
+				text-align: center;
+			}
+		</STYLE>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+   		      $('button').click(function(){
+
+			    var val = $('#txtAdd').val();
+			    $('#addList').append('<option>' + val + '</option>');
+			    $('#txtAdd').val('').focus();
+       
+         });
+    });
+		</script>
+	</head>
+	<body>
+	<B>ENTER UR FAVOURITE MOVIE NAME:&nbsp;&nbsp;</B><input type='text' id="txtAdd">
+	<button>Submit</button><br><br><br>
+	<select id='addList'>
+		<option>ENTERD LIST ITEMS</option>
+	</select>
+	</body>
+</html>		

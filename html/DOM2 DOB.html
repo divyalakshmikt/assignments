@@ -6,9 +6,9 @@
 
 function Age()
 {
-	var bday=parseInt(document.getElementById("txtBday").value);
-	var bmo=(parseInt(document.getElementById("txtBmo").value)-1);
-	var byr=parseInt(document.getElementById("txtByr").value);
+	var bday=parseInt(document.forms["bod"]["txtBday"].value);
+	var bmo=(parseInt(document.forms["bod"]["txtBmo"].value)-1);
+	var byr=parseInt(document.forms["bod"]["txtByr"].value);
 	var byr;
 	var age;
 	var now = new Date();

@@ -1,0 +1,88 @@
+<html>
+	<head>
+
+	</head>
+	<style>
+		#tbl_details
+				{
+					 width: 300px;
+                    height: 50px;
+                    border: 2px solid black  ;
+                    margin: auto;
+                    background-color: yellow;
+                    margin-top: 150px;
+                }
+
+            tr
+                {
+
+                	border: 1px solid black;
+                }
+    </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<script>
+			
+
+			
+			var a = new Array();
+			a[0] = new Array();
+			a[0][0] = "1001";
+			a[0][1] = "Tim";
+			a[0][2] = "TEACHER";
+			
+
+			a[1] = new Array();
+			a[1][0] = "1002";
+			a[1][1] = "Mary";
+			a[1][2] = "DOCTOR";
+
+
+			a[2] = new Array();
+			a[2][0] = "1003";
+			a[2][1] = "Donald";
+			a[2][2] = "MANAGER";
+			
+			a[3] = new Array();
+			a[3][0] = "1004";
+			a[3][1] = "Jack";
+			a[3][2] = "CLERK";
+			
+
+				$(document).ready(function(){
+
+					//$('#combo').on('change', function() {
+						$("#combo").change(function(){
+								
+			//alert("hello");
+			var id= $(this).find(':selected').val();
+			var append_string="<tr><td>" + a[id][0] +"</td><td>"+ a[id][1] +"</td><td>" + a[id][2]+ "</td><td>" ;
+			$('#tbl_details tr:last').after(append_string);
+			
+		});	//alert(append_string);	
+
+});			
+</script>
+</head>
+<body align='center'>
+		<table id="tbl_details" border="1">
+		  <tr>
+		   	<td> ID </td>
+		   	<td> Name</td>
+		   	<td> Designation</td>
+		   </tr>
+		</table>
+<br>
+		<select id="combo">
+		<option >Choose ID</option>
+	  <option value="0" >1001</option>	
+	  <option value="1" >1002</option>
+	  <option value="2">1003</option>
+	  <option value="3">1004</option>
+	</select> 
+<button>Submit</button>
+
+</body>
+</html>
+
+							
