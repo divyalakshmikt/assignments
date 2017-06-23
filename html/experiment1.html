@@ -1,0 +1,59 @@
+
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+$('#login').click(function()
+{	
+	var name=$("#email").val();
+	var paswd=$("#password").val();
+	
+	$.ajax(
+	{
+		'url':'http://services.trainees.baabtra.com/LoginService/login.php',
+		'DataType':'jsonp',
+		'data':{email:name,password:paswd},
+		success:function(data)
+		{
+			
+			var json = $.parseJSON(data);
+			console.log(json[0].Msg);
+			if(json[0].ResponseCode=="200")
+			{
+				//window.location.href="facebook2.html?email="+json[0].vchr_first_name+"&&name="+json[0].vchr_first_name;
+				window.location.href="project3.html";
+
+			}
+			else if(json[0].ResponseCode=="500")
+			{
+				//window.location.href="fberror?email="+json[0].vchr_user_name+"&&name="+json[0].vchr_first_name;
+				window.location.href="project2.html";
+			}
+			else
+			{
+				window.location.href="project1.html";
+			}
+			console.log(json[0].ResponseCode)
+			//$("#contact").html(data);
+		},
+		error:function(error)
+		{
+			console.log(error);
+			alert(error);
+		}
+	});
+	});
+});
+	</script>
+	</head>
+	<body>
+	
+	<input type="text" name="email" id="email">
+	<input type="password" name="password" id="password">
+	<input type="submit" value="submit" name="login" id="login">
+
+	</html>

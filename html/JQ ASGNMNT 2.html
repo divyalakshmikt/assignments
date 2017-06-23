@@ -1,0 +1,76 @@
+<html>
+<head>
+		<title>NAME AND AGE</title>
+		<style>
+			#tbl_details
+			{
+				margin: auto;
+				margin-top: 120px;
+				background-color: yellow;
+			}
+			#top
+			{
+				margin-top: 75px;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+	<script>			
+		$(document).ready(function(){	
+			$("#button").click(function(){
+				var x = document.getElementById("age").value;
+			    var y = document.getElementById("name").value;
+			    var letters = '/^[a-zA-Z]+$/';
+			    if ((parseInt(x) != (x)) && (y == parseInt(y)))
+			     {
+			        alert("Wrong Value Entered");
+			    }
+			   /* else if ((parseInt(x) = "") && (parseInt(y)=="")) 
+			    	{
+			    		 alert("Enter Values in the field");
+			    	};*/
+			     else
+			     {
+			            var rows = "";
+			            var name = document.getElementById("name").value;
+			            var age = document.getElementById("age").value;
+			            rows += "<tr><td>" + name +  "</td><td>" + age + "</td></tr>";
+			           // $(rows).appendTo("#list tbody");
+			            $('#tbl_details tr:last').after(rows);
+			        }   
+		    });
+
+			$("#delete").click(function(){
+				//$("#delete").live('click', function(event) {
+					
+							     alert("aa");
+							   // $(this).closest('tr').remove();
+							    $('#tbl_details tr:last').remove();
+							     // $(this).parents('tr').first().remove();
+							     // $('#tbl_details tbody').empty();
+				});
+		});
+	</script>		
+</head>
+<body align='center'>
+	<div id="top">
+		NAME: <input type='text'id="name" value="Monish"><br><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;AGE:  <input type='text'id="age" value="10"><br><br>
+	    <input type = "button" id = "button" value = " ADD ">
+	</div>	
+		<table id="tbl_details" border="1" cellpadding = "20px" text-align = "center">
+				<thead>
+				  <tr>
+				   	<td>NAME </td>
+				   	<td> AGE</td>
+				   
+				   </tr>
+				   </thead>
+				   <tbody id='tbl_details_body'>
+
+				   </tbody>
+				</table>
+		<br><br>
+	<input type = "button" id = "delete" value = "DELETE ">
+</body>
+</html>

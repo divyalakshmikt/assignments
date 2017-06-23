@@ -1,0 +1,16 @@
+divya marksheet
+tamil mark:33
+english mark:45
+maths mark:6
+science mark:66
+social mark:66
+total:  216
+average: 43.200000
+eee marksheet
+tamil mark:33
+english mark:55
+maths mark:55
+science mark:55
+social mark:55
+total:  253
+average: 50.600000
